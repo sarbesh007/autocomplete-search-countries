@@ -1,26 +1,61 @@
+/* eslint-disable no-undef */
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import SuggestionsBox from './components/SuggestionsBox';
+import CountryInfo from './components/CountryInfo';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+import styles from './App.module.css';
+
+
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    
+    this.state = { 
+      countries: [],
+      changedCountry: ''
+
+     }
+  }
+
+  componentDidMount () {
+    
+     fetch('https://restcountries.eu/rest/v2/all')
+    .then(response=> response.json())
+    .then(data => {
+      this.setState({countries:data});
+      //console.log("Data-->>>>"+this.state.countries[0].name+"--->>")
+ })}
+
+  handleSearchChange = (value) => {
+    
+    this.setState({changedCountry: value})
+    // console.log(this.changedCountry)
+  };
+
+  render() { 
+    const { countries, changedCountry } = this.state;
+      if(changedCountry && changedCountry.name !== ''){
+        return (
+          <div className={styles.container}>
+          <h1 className={styles.head}>Country details are</h1>
+           <SuggestionsBox countries={countries} searchChange={this.handleSearchChange} /> 
+          
+           <CountryInfo receivedCountry={changedCountry} />
+           
+          </div>
+        );
+      }
+      else{
+        return (
+          <div className={styles.container}>
+          <h1 className={styles.head}>Country details website</h1>
+           <SuggestionsBox countries={countries} searchChange={this.handleSearchChange} /> 
+          </div>
+        );
+      }
+    
+  }
 }
-
 export default App;

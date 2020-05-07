@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    border: 5px solid #dea404;
+    padding: 20px;
+  }
+
+.pad {
+    padding: 0 !important;
+}
