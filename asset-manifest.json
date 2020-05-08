@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/autocomplete-search-countries/static/css/main.4eb0d1f0.chunk.css",
+    "main.js": "/autocomplete-search-countries/static/js/main.e5f71543.chunk.js",
+    "main.js.map": "/autocomplete-search-countries/static/js/main.e5f71543.chunk.js.map",
+    "runtime-main.js": "/autocomplete-search-countries/static/js/runtime-main.becc5e9b.js",
+    "runtime-main.js.map": "/autocomplete-search-countries/static/js/runtime-main.becc5e9b.js.map",
+    "static/js/2.d649b4b3.chunk.js": "/autocomplete-search-countries/static/js/2.d649b4b3.chunk.js",
+    "static/js/2.d649b4b3.chunk.js.map": "/autocomplete-search-countries/static/js/2.d649b4b3.chunk.js.map",
+    "index.html": "/autocomplete-search-countries/index.html",
+    "precache-manifest.5d7c3a62fe784a900aa9da8b4fa9d013.js": "/autocomplete-search-countries/precache-manifest.5d7c3a62fe784a900aa9da8b4fa9d013.js",
+    "service-worker.js": "/autocomplete-search-countries/service-worker.js",
+    "static/css/main.4eb0d1f0.chunk.css.map": "/autocomplete-search-countries/static/css/main.4eb0d1f0.chunk.css.map",
+    "static/js/2.d649b4b3.chunk.js.LICENSE.txt": "/autocomplete-search-countries/static/js/2.d649b4b3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.becc5e9b.js",
+    "static/js/2.d649b4b3.chunk.js",
+    "static/css/main.4eb0d1f0.chunk.css",
+    "static/js/main.e5f71543.chunk.js"
+  ]
+}
