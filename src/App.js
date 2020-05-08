@@ -3,10 +3,7 @@ import React from 'react';
 import SuggestionsBox from './components/SuggestionsBox';
 import CountryInfo from './components/CountryInfo';
 
-
 import styles from './App.module.css';
-
-
 
 class App extends React.Component {
   constructor(props) {
@@ -19,19 +16,16 @@ class App extends React.Component {
      }
   }
 
-  componentDidMount () {
-    
+  componentDidMount () {    
      fetch('https://restcountries.eu/rest/v2/all')
     .then(response=> response.json())
     .then(data => {
       this.setState({countries:data});
-      //console.log("Data-->>>>"+this.state.countries[0].name+"--->>")
  })}
 
   handleSearchChange = (value) => {
     
     this.setState({changedCountry: value})
-    // console.log(this.changedCountry)
   };
 
   render() { 
